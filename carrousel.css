@@ -1,0 +1,228 @@
+.img1 {
+  background: url("https://images.unsplash.com/photo-1578575437130-527eed3abbec?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80");
+}
+.img2 {
+  background: url("https://images.unsplash.com/photo-1601897690942-bcacbad33e55?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=876&q=80");
+}
+.img3 {
+  background: url("https://images.unsplash.com/photo-1617952739760-1dcae19a1d93?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80")
+    no-repeat;
+}
+
+.sec-img {
+  width: 80%;
+  border-radius: 5%;
+  border: 3px solid #fff;
+}
+
+.slideshow .carousel-item {
+  min-height: 100vh;
+  background-position: center;
+  background-size: cover;
+  z-index: 1;
+}
+.slideshow .carousel-item:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+.slideshow .carousel-item .container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  /* text-align: center; */
+}
+
+.slideshow .carousel-item h2 {
+  font-size: 80px;
+  color: #fff;
+  margin: 0 0 10px;
+  opacity: 0;
+}
+
+.slideshow .carousel-item p {
+  font-size: 20px;
+  color: #f2f2f2;
+  margin: 0;
+  opacity: 0;
+}
+.slideshow .carousel-item img {
+  margin: 0;
+  opacity: 0;
+}
+.slideshow .carousel-item button {
+  margin: 0;
+  opacity: 0;
+}
+
+.slideshow .carousel-item.active h2 {
+  animation: fadeInLeft 0.8s ease forwards;
+}
+
+.slideshow .carousel-item.active p {
+  animation: fadeInRight 0.8s ease forwards;
+}
+
+.slideshow .carousel-item.active button {
+  animation: fadeInLeft 0.8s ease forwards;
+}
+
+.slideshow .carousel-item.active img {
+  animation: fadeInRight 0.8s ease forwards;
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.slideshow .carousel-controls {
+  position: absolute;
+  left: 50%;
+  bottom: 40px;
+  z-index: 10;
+  transform: translateX(-50%);
+}
+
+.slideshow .carousel-indicators {
+  position: relative;
+  margin: 0;
+}
+
+.slideshow .carousel-indicators button {
+  height: 35px;
+  width: 35px;
+  margin: 0 5px;
+  border-radius: 50%;
+  background-position: center;
+  background-size: cover;
+  border: 3px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.slideshow .carousel-indicators button.active {
+  border-color: #fff;
+  transform: scale(1.2);
+}
+
+.slideshow .carousel-control-next,
+.slideshow .carousel-control-prev {
+  height: 60px;
+  width: 60px;
+  opacity: 1;
+  z-index: 3;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.slideshow .carousel-control-next:hover,
+.slideshow .carousel-control-prev:hover {
+  box-shadow: 0 0 10px #fff;
+}
+
+.slideshow .carousel-control-next span,
+.slideshow .carousel-control-prev span {
+  width: 30px;
+}
+
+.slideshow .carousel-control-next {
+  right: -90px;
+}
+.slideshow .carousel-control-prev {
+  left: -90px;
+}
+
+
+
+.card {
+  background: url("https://images.unsplash.com/photo-1592963219751-3800a144a41e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=436&q=80")
+    no-repeat;
+  border-radius: 5%;
+  border: 3px solid #fff;
+  min-height: 55vh;
+  min-width: 40vh;
+}
+
+.aboutme {
+  min-height: 100vh;
+  background-position: center;
+  background-size: cover;
+  z-index: 1;
+}
+
+/* Product */
+.product {
+  min-height: 100vh;
+  background-position: center;
+  background-size: cover;
+  z-index: 1;
+}
+
+.product .carousel .carousel-item {
+  height: 500px;
+}
+
+.product .carousel-item img {
+    position: absolute;
+    object-fit:cover;
+    top: 0;
+    left: 0;
+    min-height: 100%;
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .sec-img {
+    width: 80%;
+    border-radius: 5%;
+    border: 3px solid #fff;
+  }
+  .slideshow .carousel-control-next,
+  .slideshow .carousel-control-prev {
+    display: none;
+  }
+  .slideshow .carousel-indicators button {
+    height: 30px;
+    width: 30px;
+  }
+  .slideshow .carousel-item h2 {
+    font-size: 45px;
+  }
+  .slideshow .carousel-item p {
+    font-size: 22px;
+  }
+  .slideshow .carousel-item.active img {
+    animation: fadeInLeft 0.8s ease forwards;
+  }
+  .slideshow .carousel-item.active h2 {
+    animation: fadeInRight 0.8s ease forwards;
+  }
+  .slideshow .carousel-item.active p {
+    animation: fadeInLeft 0.8s ease forwards;
+  }
+}
